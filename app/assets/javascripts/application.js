@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require foundation
 //= require flexslider
-//= require_tree .
+//= require petitions
 
 $(document).foundation();

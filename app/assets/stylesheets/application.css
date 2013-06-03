@@ -11,5 +11,6 @@
  *= require_self
  *= require flexslider.css
  *= require foundation_and_overrides
+ *= require icomoon
  *= require screen
  */
