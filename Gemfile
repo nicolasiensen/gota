@@ -50,3 +50,4 @@ gem "slim-rails"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'flexslider'
+gem 'fog'
