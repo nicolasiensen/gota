@@ -1,8 +1,16 @@
 // Can also be used with $(document).ready()
 $(window).load(function() {
   $('.flexslider').flexslider({
-    animation: "slide"
+    animation: "slide",
+    after: function(){ 
+      $('.flex-active-slide .info').fadeIn();
+    },
+    before: function(){
+      $('.flex-active-slide .info').fadeOut();
+    }
   });
+  $('.featured_petition .info').hide();
+  $('.flex-active-slide .info').show();
   $('.flexslider .flex-viewport').css("overflow", "visible");
 
   var page = 1;
