@@ -1,8 +1,11 @@
 .row
   .flexslider
     .header
-      .logo= image_tag "gota-logo-home.png"
+      .logo= link_to image_tag("gota-logo-home.png"), root_path
       .menu
         .like
         .user
     ul.slides= render Petition.featured
+
+.row
+  = render Post.featured

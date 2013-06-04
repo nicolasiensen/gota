@@ -58,3 +58,86 @@ body.petitions.index
     a.flex-next
       background: url("arrow-right-home.png")
       right: -35px
+
+  .featured_post
+    +grid-column(4)
+    margin-bottom: 30px
+    .image
+      img
+        +border-radius(3px 3px 0 0)
+    .box
+      background: white
+      padding: 30px
+      margin-top: -2px
+      +border-radius(0 0 3px 3px)
+      +box-shadow(lightgray 0 3px 2px -1px)
+      .title
+        margin-bottom: 20px
+        color: gray
+        font-size: 1.2em
+        line-height: 25px
+        height: 100px
+        overflow: hidden
+      .user
+        img
+          width: 55px
+          float: left
+          margin-right: 10px
+          +border-radius(55px)
+        .user_name, .created_at
+          line-height: 17px
+        .user_name
+          padding-top: 10px
+          font-weight: bold
+        .created_at
+          color: gray
+          font-size: .9em
+          font-weight: lighter
+
+@media screen and (max-width: 800px)
+  body.petitions.index
+    .header
+      .logo
+        img
+          width: 100px
+    .featured_post
+      +grid-column(6)
+    .flexslider
+      .flex-control-nav
+        display: none
+      li.featured_petition
+        .info
+          padding: 100px 10px 10px 10px
+          .title
+            font-size: 1.5em
+          .signatures
+            font-size: 2em
+            span.icon-gota
+              &:before
+                top: 2px
+          .btn
+            font-size: .8em
+
+@media screen and (max-width: 500px)
+  body.petitions.index
+    .header
+      .logo
+        img
+          width: 80px
+    .featured_post
+      +grid-column(12)
+    .flexslider
+      .flex-control-nav
+        display: none
+      li.featured_petition
+        .info
+          padding: 80px 10px 10px 10px
+          .title
+            font-size: 1em
+          .signatures
+            font-size: 1em
+            span.icon-gota
+              &:before
+                top: 2px
+          .btn
+            font-size: .8em

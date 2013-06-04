@@ -1,16 +1,25 @@
 $flamenco: #fe820e
 $shamrock: #2fb67b
 $shakespeare: #38a1d1
+$athens-gray: #f4f5f7
+$iron: #dbdcde
 
 @import compass/reset
 @import compass/css3
 @import foundation_and_overrides
 @import fonts
+@import icomoon
 @import petitions
 
-body
+body, html
   overflow-x: hidden
   font-family: Proxima Nova
+  background: $athens-gray
+
+a
+  color: $shamrock
+  &:hover
+    color: lighten($shamrock, 10%)
 
 .row
   +grid-row
@@ -31,3 +40,6 @@ body
   &:hover
     color: white
     background: lighten($flamenco, 5%)
+
+.clear
+  clear: both

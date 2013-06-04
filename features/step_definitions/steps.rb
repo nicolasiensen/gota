@@ -9,3 +9,11 @@ end
 Then(/^I should see 3 featured petitions$/) do
   page.should have_css(".featured_petition", count: 3)
 end
+
+Given(/^there is (\d+) featured posts$/) do |arg1|
+  arg1.to_i.times { Post.make! featured: true }
+end
+
+Then(/^I should see (\d+) featured posts$/) do |arg1|
+  page.should have_css(".featured_post", count: arg1.to_i)
+end
