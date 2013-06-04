@@ -3,7 +3,7 @@ Gota::Application.routes.draw do
 
   resources :petitions, only: [:index, :show]
   resources :users, only: [:show]
-  resources :posts, only: [:show]
+  resources :posts, only: [:show, :index]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

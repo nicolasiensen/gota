@@ -4,4 +4,18 @@ $(window).load(function() {
     animation: "slide"
   });
   $('.flexslider .flex-viewport').css("overflow", "visible");
+
+  var page = 1;
+  $("#posts_loader").hide();
+  $('#more_posts').click(function(){
+    page++;
+    $("#posts_loader").fadeIn();
+    $.get("/posts?page=" + page, function(data, text, xhr){
+      $("#posts_loader").hide();
+      var counter = $(".featured_post").size();
+      $("#posts").append(data);
+      if($(".featured_post").size() - counter < 3) { $(".more_posts").remove(); }
+    });
+    return false;
+  });
 });

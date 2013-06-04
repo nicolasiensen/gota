@@ -1,5 +1,4 @@
 require 'machinist/active_record'
-require 'open-uri'
 
 # Add your blueprints here.
 #
@@ -10,19 +9,19 @@ require 'open-uri'
 #   end
 
 Petition.blueprint do
-  title  { Faker::Lorem.sentence }
-  remote_image_url { "http://lorempixel.com/1024/765/people/#{sn.to_i}/" }
+  title { Faker::Lorem.sentence }
+  image { File.open("#{Rails.root}/features/support/people.jpeg") }
 end
 
 Post.blueprint do
-  remote_image_url  { "http://lorempixel.com/1024/765/animals/#{sn.to_i}/" }
-  title             { Faker::Lorem.sentence }
-  user              { User.make! }
-  body              { Faker::Lorem.paragraph(3) }
+  image { File.open("#{Rails.root}/features/support/nature.jpeg") }
+  title { Faker::Lorem.sentence }
+  user  { User.make! }
+  body  { Faker::Lorem.paragraph(3) }
 end
 
 User.blueprint do
-  first_name        { Faker::Name.first_name }
-  last_name         { Faker::Name.last_name }
-  remote_image_url  { "http://lorempixel.com/1024/765/cats/#{sn.to_i}/" }
+  first_name  { Faker::Name.first_name }
+  last_name   { Faker::Name.last_name }
+  image       { File.open("#{Rails.root}/features/support/cat.jpeg") }
 end
