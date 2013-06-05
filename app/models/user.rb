@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :first_name, :image, :last_name
+  attr_accessible :first_name, :image, :last_name, :remote_image_url
   mount_uploader :image, UserImageUploader
   scope :featured, where(featured: true)
   has_many :following, class_name: "Follow", foreign_key: "follower_id"
