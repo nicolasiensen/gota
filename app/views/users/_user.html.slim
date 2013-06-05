@@ -1,0 +1,10 @@
+.featured_user
+  .box
+    .image= image_tag user.image.thumb
+    .name= user.name
+    .follow= link_to "Seguir", root_path, class: "btn secondary icon-plus"
+    .clear
+    .stats
+      .icon-gota= raw t("follower", count: user.followers.count)
+      .icon-list= raw t("published_post", count: user.posts.count)
+      .icon-check= raw t("signature", count: user.signatures.count)

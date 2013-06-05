@@ -15,3 +15,11 @@
   .more_posts
     = image_tag "loader.gif", id: "posts_loader", class: "loader"
     = link_to "Ver mais posts", root_path, class: "btn secondary", id: "more_posts"
+
+section.featured_users
+  .row
+    .title
+      h2.icon-user Gotas em destaque
+    = render User.featured.limit(4)
+    = link_to image_tag(""), root_path, class: "signup"
+    = render User.featured.limit(4).offset(4)

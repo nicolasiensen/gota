@@ -70,11 +70,7 @@ body.petitions.index
       img
         +border-radius(3px 3px 0 0)
     .box
-      background: white
-      padding: 30px
       margin-top: -2px
-      +border-radius(0 0 3px 3px)
-      +box-shadow(lightgray 0 3px 2px -1px)
       .title
         margin-bottom: 20px
         color: gray
@@ -107,6 +103,61 @@ body.petitions.index
       margin-bottom: 30px
       font-size: 1em
       padding: 10px 0 5px 0
+  .featured_users
+    background: $gray-suit
+    margin-top: 40px
+    padding: 40px 0
+    color: gray
+    .title
+      +grid-column(12)
+    .featured_user
+      +grid-column(4)
+      margin-bottom: 20px
+      .box
+        padding: 20px
+      .image
+        float: left
+        margin-bottom: 30px
+        margin-right: 10px
+        img
+          width: 68px
+          +border-radius(68px)
+      .name
+        margin-bottom: 5px
+        padding-top: 10px
+      .btn
+        display: inline-block
+        width: auto
+        font-size: .8em
+        padding: 7px 7px 5px 7px
+        &:before
+          color: saturate(lighten($shamrock, 30%), 30%)
+          font-size: 12px
+          top: 1px
+          position: relative
+      .stats
+        border-top: #eee 1px solid
+        margin: -20px
+        padding: 20px
+        .icon-gota, .icon-list, .icon-check
+          margin-bottom: 5px
+          font-size: 14px
+          &:before
+            color: lightgray
+            text-align: center
+            display: inline-block
+            width: 25px
+            font-size: 18px
+            position: relative
+            top: 4px
+        .icon-check
+          margin-bottom: 0
+        .icon-list:before
+          font-size: 16px
+        .icon-gota:before
+          top: 3px
+  a.signup
+    +grid-column(4)
 
 @media screen and (max-width: 800px)
   body.petitions.index

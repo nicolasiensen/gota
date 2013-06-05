@@ -205,3 +205,15 @@ pt-BR:
   activerecord:
     errors:
       <<: *errors
+  follower:
+    zero: "nenhum seguidor"
+    one: "<strong>1</strong> seguidor"
+    other: "<strong>%{count}</strong> seguidores"
+  published_post:
+    zero: "nenhum post publicado"
+    one: "<strong>1</strong> post publicado"
+    other: "<strong>%{count}</strong> posts publicados"
+  signature:
+    zero: "nenhuma causa apoiada"
+    one: "<strong>1</strong> causa apoiada"
+    other: "<strong>%{count}</strong> causas apoiadas"

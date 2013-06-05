@@ -29,3 +29,7 @@ end
 Given(/^there is (\d+) featured users$/) do |arg1|
   arg1.to_i.times { User.make! featured: true }
 end
+
+Then(/^I should see (\d+) featured users$/) do |arg1|
+  page.should have_css(".featured_user", count: arg1.to_i)
+end
