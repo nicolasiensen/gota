@@ -25,3 +25,13 @@ User.blueprint do
   last_name   { Faker::Name.last_name }
   image       { File.open("#{Rails.root}/features/support/cat.jpeg") }
 end
+
+Follow.blueprint do
+  follower { User.make! }
+  followed { User.make! }
+end
+
+Signature.blueprint do
+  petition  { Petition.make! }
+  user      { User.make! }
+end
