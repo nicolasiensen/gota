@@ -8,7 +8,10 @@
     ul.slides= render Petition.featured
 
 .row
-  #posts= render Post.featured.page(1)
+  #posts
+    .title
+      h2.icon-document Posts em destaque
+    = render Post.featured.page(1)
   .more_posts
     = image_tag "loader.gif", id: "posts_loader", class: "loader"
     = link_to "Ver mais posts", root_path, class: "btn secondary", id: "more_posts"

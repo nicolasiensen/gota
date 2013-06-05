@@ -4,6 +4,7 @@ body.petitions.index
     +box-shadow(none)
     border: none
     color: white
+    margin-bottom: 40px
     text-transform: uppercase
     .header
       background: rgba(0, 0, 0, .5)
@@ -59,9 +60,12 @@ body.petitions.index
       background: url("arrow-right-home.png")
       right: -35px
 
+  #posts
+    .title
+      +grid-column(12)
   .featured_post
     +grid-column(4)
-    margin-bottom: 30px
+    margin-bottom: 20px
     .image
       img
         +border-radius(3px 3px 0 0)
@@ -96,10 +100,11 @@ body.petitions.index
   .more_posts
     text-align: center
     +grid-column(12)
+    .loader
+      margin-bottom: 20px
     a
       display: block
       margin-bottom: 30px
-      margin-top: 30px
       font-size: 1em
       padding: 10px 0 5px 0
 

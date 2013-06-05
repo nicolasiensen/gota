@@ -27,8 +27,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-
-.icon-gota:before {
+.icon-windows:before, .icon-pause:before, .icon-new:before, .icon-mic:before, .icon-mail:before, .icon-loop:before, .icon-lock:before, .icon-location:before, .icon-list:before, .icon-link:before, .icon-info:before, .icon-image:before, .icon-home:before, .icon-heart:before, .icon-gear:before, .icon-folder:before, .icon-eye:before, .icon-export:before, .icon-document:before, .icon-cross-circle:before, .icon-cross:before, .icon-credit-card:before, .icon-cmd:before, .icon-clip:before, .icon-check-circle:before, .icon-check:before, .icon-chat:before, .icon-calendar-solid:before, .icon-calendar:before, .icon-bubble:before, .icon-bookmark:before, .icon-arror-right:before, .icon-arror-left:before, .icon-alert:before, .icon-gota:before, .icon-window:before, .icon-volume:before, .icon-video:before, .icon-user:before, .icon-upload:before, .icon-unknow:before, .icon-trash:before, .icon-time:before, .icon-tag:before, .icon-star:before, .icon-search:before, .icon-question:before, .icon-power:before, .icon-plus-circle:before, .icon-plus:before, .icon-play:before, .icon-photo:before, .icon-exit:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -37,5 +36,163 @@ you can use the generic selector below, but it's slower:
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
+}
+.icon-windows:before {
 	content: "\e000";
+}
+.icon-pause:before {
+	content: "\e011";
+}
+.icon-new:before {
+	content: "\e012";
+}
+.icon-mic:before {
+	content: "\e013";
+}
+.icon-mail:before {
+	content: "\e014";
+}
+.icon-loop:before {
+	content: "\e015";
+}
+.icon-lock:before {
+	content: "\e016";
+}
+.icon-location:before {
+	content: "\e017";
+}
+.icon-list:before {
+	content: "\e018";
+}
+.icon-link:before {
+	content: "\e019";
+}
+.icon-info:before {
+	content: "\e01a";
+}
+.icon-image:before {
+	content: "\e01b";
+}
+.icon-home:before {
+	content: "\e01c";
+}
+.icon-heart:before {
+	content: "\e01d";
+}
+.icon-gear:before {
+	content: "\e01e";
+}
+.icon-folder:before {
+	content: "\e01f";
+}
+.icon-eye:before {
+	content: "\e020";
+}
+.icon-export:before {
+	content: "\e021";
+}
+.icon-document:before {
+	content: "\e022";
+}
+.icon-cross-circle:before {
+	content: "\e023";
+}
+.icon-cross:before {
+	content: "\e024";
+}
+.icon-credit-card:before {
+	content: "\e025";
+}
+.icon-cmd:before {
+	content: "\e026";
+}
+.icon-clip:before {
+	content: "\e027";
+}
+.icon-check-circle:before {
+	content: "\e028";
+}
+.icon-check:before {
+	content: "\e029";
+}
+.icon-chat:before {
+	content: "\e02a";
+}
+.icon-calendar-solid:before {
+	content: "\e02b";
+}
+.icon-calendar:before {
+	content: "\e02c";
+}
+.icon-bubble:before {
+	content: "\e02d";
+}
+.icon-bookmark:before {
+	content: "\e02e";
+}
+.icon-arror-right:before {
+	content: "\e02f";
+}
+.icon-arror-left:before {
+	content: "\e030";
+}
+.icon-alert:before {
+	content: "\e031";
+}
+.icon-gota:before {
+	content: "\e032";
+}
+.icon-window:before {
+	content: "\e001";
+}
+.icon-volume:before {
+	content: "\e002";
+}
+.icon-video:before {
+	content: "\e003";
+}
+.icon-user:before {
+	content: "\e004";
+}
+.icon-upload:before {
+	content: "\e005";
+}
+.icon-unknow:before {
+	content: "\e006";
+}
+.icon-trash:before {
+	content: "\e007";
+}
+.icon-time:before {
+	content: "\e008";
+}
+.icon-tag:before {
+	content: "\e009";
+}
+.icon-star:before {
+	content: "\e00a";
+}
+.icon-search:before {
+	content: "\e00b";
+}
+.icon-question:before {
+	content: "\e00c";
+}
+.icon-power:before {
+	content: "\e00d";
+}
+.icon-plus-circle:before {
+	content: "\e00e";
+}
+.icon-plus:before {
+	content: "\e00f";
+}
+.icon-play:before {
+	content: "\e010";
+}
+.icon-photo:before {
+	content: "\e033";
+}
+.icon-exit:before {
+	content: "\e034";
 }

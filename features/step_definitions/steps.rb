@@ -25,3 +25,7 @@ end
 Then(/^I should not see the 'see more posts' button anymore$/) do
   page.should_not have_css("#more_posts")
 end
+
+Given(/^there is (\d+) featured users$/) do |arg1|
+  arg1.to_i.times { User.make! featured: true }
+end
