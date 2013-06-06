@@ -33,3 +33,48 @@ end
 Then(/^I should see (\d+) featured users$/) do |arg1|
   page.should have_css(".featured_user", count: arg1.to_i)
 end
+
+Given(/^I have an account$/) do
+  @password = "mysecretpass"
+  @user = User.make! password: @password
+end
+
+When(/^I click on the login button$/) do
+  click_link "sign_in"
+end
+
+Then(/^I should see the login form$/) do
+  page.should have_css("form.new_user")
+end
+
+Given(/^I fill the login form correctly$/) do
+  fill_in "Email", with: @user.email
+  fill_in "Senha", with: @password
+end
+
+When(/^I submit the login form$/) do
+  within("form.new_user") do
+    find("input[type='submit']").click
+  end
+end
+
+Then(/^I should be in "(.*?)"$/) do |arg1|
+  current_path.should == route_to_path(arg1)
+end
+
+Then(/^I should not see the login button$/) do
+  page.should_not have_css("a#sign_in")
+end
+
+Then(/^I should see my profile picture$/) do
+  page.should have_css(".user img")
+end
+
+Given(/^I fill the login form incorrectly$/) do
+  fill_in "Email", with: "test@umagotanooceano.org"
+  fill_in "Senha", with: "wrongpass"
+end
+
+Then(/^I should see the login error message$/) do
+  page.should have_selector('form.new_user .alert', visible: true)
+end

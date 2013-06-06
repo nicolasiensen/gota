@@ -1,4 +1,6 @@
 Gota::Application.routes.draw do
+  devise_for :users
+
   root :to => 'petitions#index'
 
   resources :petitions, only: [:index, :show]

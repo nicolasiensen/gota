@@ -24,6 +24,7 @@ User.blueprint do
   first_name  { Faker::Name.first_name }
   last_name   { Faker::Name.last_name }
   image       { File.open("#{Rails.root}/features/support/cat.jpeg") }
+  email       { Faker::Internet.email }
 end
 
 Follow.blueprint do

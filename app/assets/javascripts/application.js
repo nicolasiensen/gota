@@ -12,8 +12,26 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.facebox
 //= require foundation
 //= require flexslider
 //= require petitions
 
 $(document).foundation();
+
+$(function(){
+  $('a[rel*=facebox]').facebox()
+
+  $(document).bind('reveal.facebox', function() {
+    $("form.new_user")
+      .bind("ajax:beforeSend", function(){
+        $("form.new_user .alert").hide();
+      })
+      .bind("ajax:success", function(){
+        location.reload(true);
+      })
+      .bind("ajax:error", function(xhr, status, error){
+        $("form.new_user .alert").fadeIn();
+      })
+  });
+});

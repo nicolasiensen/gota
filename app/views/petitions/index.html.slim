@@ -5,6 +5,10 @@
       .menu
         .like
         .user
+          - if current_user.nil?
+            = link_to "Cadastro / Login", new_user_session_path, class: ["btn", "secondary"], id: "sign_in", rel: "facebox"
+          - else
+            = image_tag current_user.image.thumb
     ul.slides= render Petition.featured
 
 .row

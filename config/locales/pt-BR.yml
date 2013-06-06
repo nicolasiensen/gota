@@ -205,6 +205,11 @@ pt-BR:
   activerecord:
     errors:
       <<: *errors
+    attributes:
+      user:
+        email: "Email"
+        password: "Senha"
+        remember_me: "Manter-me conectado"
   follower:
     zero: "nenhum seguidor"
     one: "<strong>1</strong> seguidor"

@@ -38,6 +38,8 @@ a
   font-size: 1.5em
   text-align: center
   text-transform: uppercase
+  border: 0
+  cursor: pointer
   +border-radius(3px)
   +box-shadow(darken($flamenco, 10%) 0 2px)
   &:hover
@@ -48,6 +50,9 @@ a
     +box-shadow(darken($shamrock, 10%) 0 2px)
     &:hover
       background: lighten($shamrock, 5%)
+  &:disabled
+    background: gray
+    +box-shadow(darken(gray, 10%) 0 2px)
 
 .clear
   clear: both
@@ -67,3 +72,29 @@ h2
   padding: 30px
   +border-radius(0 0 3px 3px)
   +box-shadow(lightgray 0 3px 2px -1px)
+
+form
+  label
+    display: inline
+  .field
+    margin-bottom: 1em
+  input[type='submit']
+    font-size: .8em
+    padding: 10px 10px 7px 10px
+
+#facebox
+  .content
+    padding: 15px
+  .close
+    img
+      display: none
+      &:first-child
+        display: block
+
+.alert
+  color: red
+
+form.new_user
+  .alert
+    margin-bottom: 1em
+    display: none
