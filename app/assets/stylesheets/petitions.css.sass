@@ -28,7 +28,7 @@ body.petitions.index
       .info
         top: 0
         left: 0
-        padding: 150px 30px 30px 30px
+        padding: 160px 30px 30px 30px
         width: 100%
         position: absolute
         background: rgba(0, 0, 0, .5)
@@ -72,15 +72,21 @@ body.petitions.index
     .image
       img
         +border-radius(3px 3px 0 0)
+        &:hover
+          +opacity(.9)
     .box
       margin-top: -2px
       .title
         margin-bottom: 20px
-        color: gray
-        font-size: 1.2em
-        line-height: 25px
         height: 100px
         overflow: hidden
+        a
+          color: gray
+          font-size: 1.2em
+          line-height: 25px
+          font-weight: bold
+          &:hover
+            border-bottom: 1px gray dotted
       .user
         img
           width: 55px
