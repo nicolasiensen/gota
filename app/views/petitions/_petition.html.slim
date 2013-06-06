@@ -3,5 +3,5 @@ li.featured_petition
   .info
     .signatures
       span.icon-gota= content_tag(:span, petition.signatures.count)
-    .title= petition.title
+    .title= simple_format petition.title
     .link= link_to "Saiba mais", petition, class: "btn"
