@@ -172,7 +172,10 @@ body.petitions.index
           top: 3px
   a.signup
     +grid-column(4)
+    text-align: center
+    margin-bottom: 20px
     img
+      width: 293px
       &:hover
         +opacity(.9)
 
@@ -184,6 +187,9 @@ body.petitions.index
           width: 100px
     .featured_post
       +grid-column(6)
+    .featured_users
+      .featured_user, a.signup
+        +grid-column(6)
     .flexslider
       .flex-control-nav
         display: none
@@ -208,6 +214,9 @@ body.petitions.index
           width: 80px
     .featured_post
       +grid-column(12)
+    .featured_users
+      .featured_user, a.signup
+        +grid-column(12)
     .flexslider
       .flex-control-nav
         display: none
