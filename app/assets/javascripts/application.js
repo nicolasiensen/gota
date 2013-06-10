@@ -33,5 +33,19 @@ $(function(){
       .bind("ajax:error", function(xhr, status, error){
         $("form.new_user .alert").fadeIn();
       })
+
+    $("form.new_user #session_type_signup, form.new_user #session_type_signin").change(function(){
+      if($("input[name='session[type]']:checked").val() == 'signup')
+        $("form.new_user #user_password").attr('disabled', 'disabled');
+      else
+        $("form.new_user #user_password").removeAttr('disabled');
+    });
+
+    $("form.new_user input[type='submit']").click(function(){
+      if($("input[name='session[type]']:checked").val() == 'signup'){
+        window.location.href = "/users/sign_up?email=" + $("form.new_user #user_email").val(); 
+        return false;
+      }
+    });
   });
 });
