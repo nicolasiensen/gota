@@ -4,6 +4,8 @@ $shakespeare: #38a1d1
 $athens-gray: #f4f5f7
 $iron: #dbdcde
 $gray-suit: #eeedf2
+$jumbo: #808082
+$silver-sand: #bdc2c6
 
 @import compass/reset
 @import compass/css3
@@ -38,8 +40,10 @@ a
   font-size: 1.5em
   text-align: center
   text-transform: uppercase
+  font-family: Proxima Nova
   border: 0
   cursor: pointer
+  margin: 0
   +border-radius(3px)
   +box-shadow(darken($flamenco, 10%) 0 2px)
   &:hover
@@ -75,26 +79,71 @@ h2
 
 form
   label
-    display: inline
+    display: inline-block
+    font-size: 1.1em
+    margin-bottom: .25em
+    color: $jumbo
   .field
-    margin-bottom: 1em
+    margin-bottom: 2.5em
+    .field
+      margin-bottom: .5em
   input[type='submit']
     font-size: .8em
     padding: 10px 10px 7px 10px
+  input[type='email'], input[type='password']
+    border: $silver-sand 2px solid
+    font-size: 1em
+    +box-shadow(none)
+    +border-radius(3px)
+  input[type='checkbox'], input[type='radio']
+    position: relative
+    top: -1px
+    margin: 0 .75em 0 0
 
 #facebox
   .content
-    padding: 15px
+    padding: 30px
   .close
     img
       display: none
       &:first-child
         display: block
+  h2
+    font-size: 1.4em
+    line-height: 0
+    margin-top: 0
+    margin-bottom: 1.5em
+    margin-left: -2px
 
 .alert
   color: red
 
 form.new_user
+  width: 422px
+  margin: 0
   .alert
     margin-bottom: 1em
     display: none
+  input[type='submit']
+    font-size: 1.5em
+    padding: 15px 20px 10px 20px
+  label[for='user_remember_me']
+    font-size: .9em
+  .field
+    &.submit
+      margin-bottom: 1em
+  input[type='password']
+    display: inline-block
+    margin-bottom: .5em
+    width: 231px
+  label[for='session_type_signin'], label[for='session_type_signup']
+    margin: 0 .5em
+  input[type='radio']
+    margin-left: 1em
+  label[for='user_password']
+    margin-bottom: 1em
+  label[for='user_password'], label[for='user_email']
+    font-weight: bold
+  a[href="/users/password/new"]
+    margin-left: 191px
+    font-size: .9em

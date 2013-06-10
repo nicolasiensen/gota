@@ -1,16 +1,21 @@
+h2 Entre no Gota
 = form_for(resource, as: resource_name, url: session_path(resource_name), remote: true) do |f|
   .alert Email e/ou senha estão incorretos
   .field
     = f.label :email
-    = f.email_field :email, :autofocus => true
+    = f.email_field :email, :autofocus => true, :placeholder => "Insira seu e-mail"
   .field
-    = f.label :password
-    = f.password_field :password
-  - if devise_mapping.rememberable?
+    = f.label :password, "Você já faz parte do Gota?"
     .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .field
-    = f.submit "Login", class: "btn"
-
-= render "devise/shared/links"
+      = radio_button "session", "type", "signup"
+      = label :signup, "Não, quero me cadastrar.", for: "session_type_signup"
+    .field
+      = radio_button "session", "type", "signin", checked: true
+      = label :signin, "Sim, já faço parte!", for: "session_type_signin"
+      = f.password_field :password, :placeholder => "Insira sua senha"
+      = render "devise/shared/links"
+  .field.submit
+    = f.submit "Entrar", class: "btn"
+  - if devise_mapping.rememberable?
+    = f.check_box :remember_me
+    = f.label :remember_me

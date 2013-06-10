@@ -48,8 +48,8 @@ Then(/^I should see the login form$/) do
 end
 
 Given(/^I fill the login form correctly$/) do
-  fill_in "Email", with: @user.email
-  fill_in "Senha", with: @password
+  fill_in "user_email", with: @user.email
+  fill_in "user_password", with: @password
 end
 
 When(/^I submit the login form$/) do
@@ -71,8 +71,8 @@ Then(/^I should see my profile picture$/) do
 end
 
 Given(/^I fill the login form incorrectly$/) do
-  fill_in "Email", with: "test@umagotanooceano.org"
-  fill_in "Senha", with: "wrongpass"
+  fill_in "user_email", with: "test@umagotanooceano.org"
+  fill_in "user_password", with: "wrongpass"
 end
 
 Then(/^I should see the login error message$/) do

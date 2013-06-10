@@ -207,7 +207,7 @@ pt-BR:
       <<: *errors
     attributes:
       user:
-        email: "Email"
+        email: "Qual é o seu e-mail?"
         password: "Senha"
         remember_me: "Manter-me conectado"
   follower:
