@@ -78,3 +78,29 @@ end
 Then(/^I should see the login error message$/) do
   page.should have_selector('form.new_user .alert', visible: true)
 end
+
+Given(/^I fill in the sign up form right$/) do
+  fill_in "user_first_name", with: Faker::Name.first_name
+  fill_in "user_last_name", with: Faker::Name.last_name
+  fill_in "user_email", with: "nicolas@umagotanooceano.org"
+  fill_in "user_email_confirmation", with: "nicolas@umagotanooceano.org"
+  fill_in "user_password", with: "mysecretpass"
+  fill_in "user_password_confirmation", with: "mysecretpass"
+end
+
+When(/^I submit the sign up form$/) do
+  page.find("form.new_user input[type='submit']").click
+end
+
+Given(/^I fill the email confirmation wrong$/) do
+  fill_in "user_first_name", with: Faker::Name.first_name
+  fill_in "user_last_name", with: Faker::Name.last_name
+  fill_in "user_email", with: "nicolas@umagotanooceano.org"
+  fill_in "user_email_confirmation", with: "dudu@umagotanooceano.org"
+  fill_in "user_password", with: "mysecretpass"
+  fill_in "user_password_confirmation", with: "mysecretpass"
+end
+
+Then(/^I should see the email confirmation error$/) do
+  page.should have_css(".field_with_errors #user_email_confirmation")
+end
