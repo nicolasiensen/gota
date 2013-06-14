@@ -1,0 +1,62 @@
+body.registrations.new
+  .title
+    margin-bottom: 1em
+    +grid-column(12)
+    h1
+      color: #666
+      font-size: 2.2em
+      line-height: normal
+  .row
+    form
+      +grid-column(12)
+      .image
+        +grid-column(3)
+        text-align: center
+        img
+          margin-bottom: 1em
+        .btn
+          font-size: .9em
+          padding: 7px 10px 4px 10px
+          &:before
+            color: saturate(lighten($shamrock, 30%), 30%)
+            font-size: 12px
+            top: 1px
+            position: relative
+      .form
+        +grid-column(9)
+      input.btn
+        font-size: 1.4em
+        padding: 15px 30px 10px 30px
+      input[type='file']
+        display: inline
+        width: auto
+      label
+        display: block
+        &:after
+          float: right
+      .field
+        width: 45%
+        margin-right: 5%
+        float: left
+        margin-bottom: 10px
+        &.bio
+          width: 100%
+          margin-top: 40px
+          textarea
+            height: 150px
+        &.website
+          width: 100%
+          margin-bottom: 40px
+        &.zipcode
+          width: 100%
+          input
+            width: 50%
+        &.address
+          width: 100%
+        &.subscriber
+          width: 100%
+          margin-bottom: 40px
+          label
+            font-weight: normal
+            font-size: .9em
+            display: inline

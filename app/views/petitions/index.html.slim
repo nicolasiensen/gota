@@ -1,14 +1,6 @@
 .row
   .flexslider
-    .header
-      .logo= link_to image_tag("gota-logo-home.png"), root_path
-      .menu
-        .like
-        .user
-          - if current_user.nil?
-            = link_to "Cadastro / Login", new_user_session_path, class: ["btn", "secondary"], id: "sign_in", rel: "facebox"
-          - else
-            = image_tag current_user.image.thumb
+    = render file: "shared/header"
     ul.slides= render Petition.featured
 
 .row

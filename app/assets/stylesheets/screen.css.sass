@@ -13,6 +13,7 @@ $silver-sand: #bdc2c6
 @import fonts
 @import icomoon
 @import petitions
+@import registrations
 
 body, html
   overflow-x: hidden
@@ -64,6 +65,9 @@ a
 img.loader
   width: 50px
 
+h1
+  font-family: Proxima Nova
+
 h2
   text-transform: uppercase
   color: $shakespeare
@@ -83,6 +87,11 @@ form
     font-size: 1.1em
     margin-bottom: .25em
     color: $jumbo
+    font-weight: bold
+    &.required
+      &:after
+        content: "*"
+        color: $flamenco
   .field
     margin-bottom: 2.5em
     .field
@@ -90,7 +99,7 @@ form
   input[type='submit']
     font-size: .8em
     padding: 10px 10px 7px 10px
-  input[type='email'], input[type='password']
+  input[type='email'], input[type='password'], input[type='text'], textarea
     border: $silver-sand 2px solid
     font-size: 1em
     +box-shadow(none)
@@ -114,36 +123,71 @@ form
     margin-top: 0
     margin-bottom: 1.5em
     margin-left: -2px
+  form.new_user
+    width: 422px
+    margin: 0
+    .alert
+      margin-bottom: 1em
+      display: none
+    input[type='submit']
+      font-size: 1.5em
+      padding: 15px 20px 10px 20px
+    label[for='user_remember_me']
+      font-size: .9em
+      font-weight: normal
+    .field
+      &.submit
+        margin-bottom: 1em
+    input[type='password']
+      display: inline-block
+      margin-bottom: .5em
+      width: 231px
+    label[for='session_type_signin'], label[for='session_type_signup']
+      margin: 0 .5em
+      font-weight: normal
+    input[type='radio']
+      margin-left: 1em
+    label[for='user_password']
+      margin-bottom: 1em
+    label[for='user_password'], label[for='user_email']
+      font-weight: bold
+    a[href="/users/password/new"]
+      margin-left: 191px
+      font-size: .9em
 
 .alert
   color: red
 
-form.new_user
-  width: 422px
-  margin: 0
-  .alert
-    margin-bottom: 1em
-    display: none
-  input[type='submit']
-    font-size: 1.5em
-    padding: 15px 20px 10px 20px
-  label[for='user_remember_me']
-    font-size: .9em
-  .field
-    &.submit
-      margin-bottom: 1em
-  input[type='password']
-    display: inline-block
-    margin-bottom: .5em
-    width: 231px
-  label[for='session_type_signin'], label[for='session_type_signup']
-    margin: 0 .5em
-  input[type='radio']
-    margin-left: 1em
-  label[for='user_password']
-    margin-bottom: 1em
-  label[for='user_password'], label[for='user_email']
-    font-weight: bold
-  a[href="/users/password/new"]
-    margin-left: 191px
-    font-size: .9em
+header, .flexslider
+  .header
+    +grid-column(12)
+    padding-top: 15px
+    padding-bottom: 15px
+    .logo
+      float: left
+      a
+        display: inline-block
+        width: 140px
+        height: 75px
+        background: url("gota-logo-home.png") no-repeat
+    .user
+      float: right
+      margin-top: 15px
+      .name, img
+        float: right
+        text-transform: none
+      img
+        width: 50px
+        +border-radius(50px)
+      .btn
+        font-size: .9em
+        padding: 10px 15px 7px 15px
+        margin-top: 5px
+
+header
+  background: white
+  margin-bottom: 40px
+  .header
+    .logo
+      a
+        background: url("logo-gota-internas.png") no-repeat

@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :image, :last_name, :remote_image_url, :email_confirmation
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :image, :last_name, :remote_image_url, :email_confirmation, :bio, :website, :zipcode, :address, :city, :state, :subscriber
   attr_accessor :email_confirmation
   mount_uploader :image, UserImageUploader
   scope :featured, where(featured: true)
