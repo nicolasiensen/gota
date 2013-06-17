@@ -213,6 +213,7 @@ DEPENDENCIES
   mini_magick
   pg
   rails (= 3.2.13)
+  rake
   sass-rails (~> 3.2.3)
   slim-rails
   uglifier (>= 1.0.3)
