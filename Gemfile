@@ -42,6 +42,8 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'rake'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 gem 'machinist', '>= 2.0.0.beta2'
